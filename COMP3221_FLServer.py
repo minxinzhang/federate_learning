@@ -12,9 +12,7 @@ import random
 import struct
 
 class MCLR(nn.Module):
-    """
-    borrow from W6_Tutorial_Federated_Learning-Solution
-    """
+
     def __init__(self):
         super(MCLR, self).__init__()
         self.fc1 = nn.Linear(784, 10)
