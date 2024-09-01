@@ -10,9 +10,6 @@ import struct
 import os
 
 class MCLR(nn.Module):
-    """
-    borrow from W6_Tutorial_Federated_Learning-Solution
-    """
     def __init__(self):
         super(MCLR, self).__init__()
         self.fc1 = nn.Linear(784, 10)
@@ -24,9 +21,6 @@ class MCLR(nn.Module):
         return output
     
 class UserAVG():
-    """
-    borrow from W6_Tutorial_Federated_Learning-Solution
-    """
     def __init__(self, client_id, model, learning_rate, batch_size):
 
         self.X_train, self.y_train, self.X_test, self.y_test, self.train_samples, self.test_samples = get_data(client_id)
@@ -120,10 +114,7 @@ def print_save(str):
     fp.write(str+'\n')
 
 def get_data(client_id):
-    """
-    borrow from 'W6_Tutorial_Federated_Learning-Solution'
-    and modified a bit
-    """
+
     
     train_data = {}
     test_data = {}
